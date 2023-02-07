@@ -1,4 +1,23 @@
-<h1>All Shoes</h1>
+<h1>Shoe Shop</h1>
+
+<div class="row">
+<% @shoes.each do |shoe|%>
+
+<div class="card" style="width: 18rem;">
+  <img src=<%= shoe.images[0].url %> class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= shoe.name%></h5>
+    <p class="card-text"><%= shoe.brand.name%>.</p>
+    <p class="card-text"><%= shoe.size%>.</p>
+    <a href="#" class="btn btn-primary">Details</a>
+  </div>
+</div>
+<%end%>
+</div>
+
+
+
+
 
 <% @shoes.each do |shoe|%>
   <h2><%=shoe.name%></h2>
@@ -9,4 +28,4 @@
   
   <p>Brand: <%= shoe.brand.name%>  </p> 
   <p>Size: <%= shoe.size %>  </p> 
-<%end%>
+<%end %>
