@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root "shoes#index"
 
   resources :shoes
+
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
 end

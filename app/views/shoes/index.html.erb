@@ -1,31 +1,23 @@
-<h1>Shoe Shop</h1>
+<h1>Sneaker Shop</h1>
 
 <div class="row">
-<% @shoes.each do |shoe|%>
-
-<div class="card" style="width: 18rem;">
-  <img src=<%= shoe.images[0].url %> class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= shoe.name%></h5>
-    <p class="card-text"><%= shoe.brand.name%>.</p>
-    <p class="card-text"><%= shoe.size%>.</p>
-    <a href="#" class="btn btn-primary">Details</a>
-  </div>
-</div>
-<%end%>
-</div>
-
-
-
-
-
-<% @shoes.each do |shoe|%>
-  <h2><%=shoe.name%></h2>
-
-  <% shoe.images.each do |image| %>
-    <img src="<%= image.url %>" width="200" />
+ <% @shoes.each do |shoe|%>
+   <div class="col-4">
+      <div class="card">
+        <img src=<%= shoe.images[0].url %> class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= shoe.name%></h5>
+          <p class="card-text"><%= shoe.brand.name%>.</p>
+          <p class="card-text"><%= shoe.size%>.</p>
+          <button type="button" class="btn btn-dark">Shop</button>
+          <%# <a href="#" class="btn btn-primary">Shop</a> %>
+          <%# <button class="my-button">Shop</button> %>
+        </div>
+      </div>
+    </div>
   <%end%>
-  
-  <p>Brand: <%= shoe.brand.name%>  </p> 
-  <p>Size: <%= shoe.size %>  </p> 
-<%end %>
+</div>
+
+
+
+
