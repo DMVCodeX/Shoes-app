@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     if User.save
       session[:user_id] = @user.id
-      redirect_to "/shoes"
+      redirect_to "/login"
     else
       render :new, status: :unprocessable_entity
     end
